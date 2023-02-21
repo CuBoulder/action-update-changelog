@@ -1,0 +1,19 @@
+name: 'Update Changelog'
+description: 'This action enables maintaining a JSON file in a respository updated with new changes and releases.'
+inputs:
+  data:
+    description: 'Existing changelog input data in JSON format'
+    required: true
+    default: '{}'
+  change-title:
+    description: 'The title of a new change to add to the changelog'
+    required: false
+  change-description:
+    description: 'The description of a new change to add to the changelog'
+    required: false
+outputs:
+  data:
+    description: 'New changelog output data in JSON format'
+runs:
+  using: 'node18'
+  main: 'index.js'
